@@ -7,7 +7,7 @@ int main() {
     char b[] = "ABC";
     float c[] = {1.1, 1.2, 1.3};
 
-    int array1[3]={};
+    int array1[3];
 
     if ((fp = fopen("a.bin", "wb+")) == NULL) {
         printf("無法開啟");
@@ -26,6 +26,6 @@ int main() {
             // printf("%lu",fread(a[i], sizeof(a), 1, fp));
         }
     }
-    fclose("a.bin");
+    fclose(fp);
     return 0;
 }
