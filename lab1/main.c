@@ -26,5 +26,6 @@ int main() {
             // printf("%lu",fread(a[i], sizeof(a), 1, fp));
         }
     }
+    fclose("a.bin");
     return 0;
 }
