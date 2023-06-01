@@ -17,7 +17,8 @@ class myString {
 class ReadClass {
    public:
     void showClass() {
-        ifstream file("main.cpp");  // 開啟程式碼檔案
+        // ifstream file("main.cpp");  // 開啟程式碼檔案
+        ifstream file(__FILE__);
         string line;
         int i = 0;
         vector<string> className;
@@ -35,7 +36,7 @@ class ReadClass {
                 }
             }
         }
-        cout << count << " class in main.cpp" << endl;
+        cout << count << " class in " << __FILE__ << endl;
         for (int i = 0; i < count; i++) {
             cout << "class " << className[i] << endl;
         }
